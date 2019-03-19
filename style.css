@@ -52,7 +52,6 @@ li{
 }
 
 .movie-title{
- // max-width : 100%;
   color: grey;
   font-size: 1.25rem;
   font-weight: 400;
@@ -61,7 +60,7 @@ li{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  padding-bottom: 5px;
 }
 
 .movie-type{
@@ -70,6 +69,7 @@ li{
   font-weight: 200;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  padding-top:5px;
 }
 
 
