@@ -7,7 +7,7 @@ function createResultsList (content) {
   content.Search.forEach(element => {
       var newListItem = document.createElement("li");
       newListItem.addEventListener('mouseover',handleHover);
-      newListItem.innerHTML = '<div class="movie-title" id=' + element.imdbID + '> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img id=' + element.imdbID + ' src='+ element.Poster +'/></div><div class="movie-type" id=' + element.imdbID + '> '+ JSON.stringify(element.Type).slice(1, -1) + '</div>';
+      newListItem.innerHTML = '<div class="tooltip" id=top'+element.imdbID+'><div class="movie-title" id=' + element.imdbID + '> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img id=' + element.imdbID + ' src='+ element.Poster +'/></div><div class="movie-type" id=' + element.imdbID + '> '+ JSON.stringify(element.Type).slice(1, -1) + '</div></div>';
       newList.appendChild(newListItem);  
     });
   document.getElementById("results-container").appendChild(newList);
@@ -31,7 +31,13 @@ const handleInput = async function (evt) {
 const handleHover = async function (evt) {
   const response = await fetch(`https://www.omdbapi.com/?apikey=aba065d3&i=${evt.target.id}`);
   const content = await response.json();
-  console.log(content.Director);
+  if(content.Director){
+   var element = document.getElementById('top'+evt.target.id);
+   element.innerHTML += '<span class="tooltiptext">Director : '+ content.Director +'</span>';
+  }
+  else {
+
+  }
 }
 
 const search = document.getElementById('search');
