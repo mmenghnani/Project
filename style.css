@@ -21,9 +21,10 @@
 }
 
 img {
-  height: auto;
-  width : 300px;
+  width:350px;
+  height:450px;
   vertical-align: middle;
+  horizontal-align: middle;
   border-radius: 0.25rem;
   position : relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
@@ -39,7 +40,8 @@ li{
   display:flex;
   flex-direction: column;
   padding: 1rem;
-  width:400px;
+  width: 400px;
+  height: 500px;
 	margin:15px;
 	background:#fff;
 	border:1px solid black;
@@ -64,7 +66,6 @@ li{
   font-weight: 200;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding-top : 10px;
 }
 
 .flex-row {

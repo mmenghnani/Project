@@ -7,7 +7,7 @@ function createResultsList (content) {
   content.Search.forEach(element => {
       var newListItem = document.createElement("li");
       newListItem.addEventListener('mouseover',handleHover);
-      newListItem.innerHTML = '<div class="tooltip"><div class="thumbnail element movie-title" id=' + element.imdbID + '> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div><img id=' + element.imdbID + ' src='+ element.Poster +'/></div><div class="movie-type" id=' + element.imdbID + '> '+ JSON.stringify(element.Type).slice(1, -1) + '</div></div>';
+      newListItem.innerHTML = '<div class="movie-title" id=' + element.imdbID + '> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img id=' + element.imdbID + ' src='+ element.Poster +'/></div><div class="movie-type" id=' + element.imdbID + '> '+ JSON.stringify(element.Type).slice(1, -1) + '</div>';
       newList.appendChild(newListItem);  
     });
   document.getElementById("results-container").appendChild(newList);
