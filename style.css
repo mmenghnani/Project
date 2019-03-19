@@ -22,7 +22,7 @@
 
 img {
   height: auto;
-  max-width: 100%;
+  width : 300px;
   vertical-align: middle;
   border-radius: 0.25rem;
   position : relative;
@@ -39,7 +39,7 @@ li{
   display:flex;
   flex-direction: column;
   padding: 1rem;
-  max-width:300px;
+  width:400px;
 	margin:15px;
 	background:#fff;
 	border:1px solid black;
