@@ -4,6 +4,7 @@ import './style.css';
 // Write Javascript code!
 function createResultsList (content) { 
   var newList = document.createElement("ul"); 
+  console.log(content);
   content.Search.forEach(element => {
       var newListItem = document.createElement("li");
       newListItem.addEventListener('mouseover',handleHover);
@@ -20,6 +21,7 @@ const handleInput = async function (evt) {
   const response = await fetch(`https://www.omdbapi.com/?apikey=aba065d3&s=${evt.target.value}`);
   const content = await response.json();
   if(content.Response === 'False'){
+    console.log(content.Error);
     document.getElementById("results-container").innerHTML = JSON.stringify(content.Error)
   }
   else {
