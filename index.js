@@ -4,7 +4,7 @@ import './style.css';
 // Write Javascript code!
 function createResultsList (content) { 
   var newList = document.createElement("ul"); 
-  console.log(content);
+  //console.log(content);
   content.Search.forEach(element => {
       var newListItem = document.createElement("li");
       newListItem.addEventListener('mouseover',handleHover);
@@ -45,5 +45,13 @@ const handleHover = async function (evt) {
 const search = document.getElementById('search');
 search.addEventListener('input', handleInput);
 
-const resultsContainer = document.getElementById('results-container');
-resultsContainer.addEventListener('mouseover', handleHover);
+// document.querySelectorAll('li').forEach(element => {
+//   element.addEventListener('mouseenter', handleHover);
+// })
+
+// const resultsContainer = document.getElementById('results-container');
+// resultsContainer.addEventListener('mouseover', handleHover);
+
+// allElements.forEach(element => {
+//   element.addEventListener('mouseenter',handleHover);
+// })

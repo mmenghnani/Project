@@ -93,7 +93,7 @@ li{
 
 
 .tooltip {
-  /* position: relative; */
+  position: relative;
   display: inline;
   
 }
