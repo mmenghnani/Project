@@ -88,6 +88,7 @@ li{
 .tooltip {
   position: relative;
   display: inline;
+  z-index : 999;
   
 }
 
@@ -105,6 +106,7 @@ li{
   position: absolute;
   top: 50px;
   left: 105%;
+  z-index : 999;
 }
 
 .tooltip:hover .tooltiptext {
