@@ -8,6 +8,7 @@ function createResultsList (content) {
   content.Search.forEach(element => {
       var newListItem = document.createElement("li");
       newListItem.addEventListener('mouseover',handleHover);
+      newListItem.addEventListener('mouseleave',handleMouseLeave);
       newListItem.innerHTML = '<div class="tooltip" id=top'+element.imdbID+'><div class="movie-title" id=' + element.imdbID + '> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img id=' + element.imdbID + ' src='+ element.Poster +'/></div><div class="movie-type" id=' + element.imdbID + '> '+ JSON.stringify(element.Type).slice(1, -1) + '</div></div>';
       newList.appendChild(newListItem);  
     });
@@ -40,14 +41,33 @@ const handleHover = async function (evt) {
   else {
 
   }
+
+}
+  
+
+const handleMouseLeave = async function (evt) {
+  console.log(evt);
+  var element = document.getElementById(top+'evt.target.id');
+  if(element){
+    element.innerHTML = "";
+  }
+  // if(content.Director){
+  //  var element = document.getElementById('top'+evt.target.id);
+  //  element.innerHTML += '<span class="tooltiptext">Title - '+ content.Title + ' <br />Year - '+ content.Year + '<br />Rating - '+ content.imdbRating +'<br />Director - '+ content.Director +'</span>';
+  // }
+  // else {
+
+  // }
 }
 
 const search = document.getElementById('search');
 search.addEventListener('input', handleInput);
 
 // document.querySelectorAll('li').forEach(element => {
-//   element.addEventListener('mouseenter', handleHover);
+//   element.addEventListener('onmouseenter', handleHover);
 // })
+
+// console.log(document.querySelectorAll('li'));
 
 // const resultsContainer = document.getElementById('results-container');
 // resultsContainer.addEventListener('mouseover', handleHover);
