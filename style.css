@@ -13,13 +13,6 @@
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-.element{
-
-}
-.element:hover{
-    background-color:red;
-}
-
 img {
   width:350px;
   height:450px;
@@ -118,7 +111,7 @@ li{
   visibility: visible;
   display : block;
   position : absolute;
- 
+  z-index : 999;
 }
 
 .search-container{
