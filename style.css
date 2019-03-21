@@ -116,9 +116,8 @@ li{
 
   /* Position the tooltip */
   position: absolute;
-  top: 50px;
-  left: 105%;
-  z-index : 999;
+  top: 10%;
+  left: 95%;
 }
 
 .tooltip:hover .tooltiptext {
