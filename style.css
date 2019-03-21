@@ -101,7 +101,6 @@ li{
 .tooltip {
   position: relative;
   display: block;
-  z-index : 999;
   
 }
 

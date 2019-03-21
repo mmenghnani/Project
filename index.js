@@ -8,7 +8,7 @@ function createResultsList (content) {
       var newListItem = document.createElement("li");
       newListItem.setAttribute("id",element.imdbID);
       newListItem.setAttribute("class","tooltip");
-      newListItem.innerHTML = '<div><div class="movie-title"> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img src='+ element.Poster +'/></div><div class="movie-type"> '+ JSON.stringify(element.Type).slice(1, -1) + '</div></div>';
+      newListItem.innerHTML = '<div><div class="movie-title"> '+ JSON.stringify(element.Title).slice(1, -1) + '</div><div class="image-container"><img src='+ element.Poster +' alt ="movie poster"/></div><div class="movie-type">'+ JSON.stringify(element.Type).slice(1, -1) + '</div></div>';
       newListItem.addEventListener('mouseenter',handleMouseEnter);
       newList.appendChild(newListItem);  
     });
