@@ -9,6 +9,39 @@
   font-size : 32px;
 }
 
+
+.search-container{
+    background-color: white;
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    overflow: hidden;
+    border-radius: 10px;
+    height : 40px;
+} 
+
+input#search{
+  margin: 0 auto;
+  position : 100px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 1.35rem;
+  }
+
+  .search:focus{
+    border: 1px solid red;
+    transition: 0.35s ease;
+    color : red;
+  } 
+
 #results-container {
   background-color: rgba(0, 0, 0, 0.03);
 }
@@ -19,13 +52,11 @@ img {
   vertical-align: middle;
   border-radius: 0.25rem;
   position : relative;
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
 }
 
 ul{
   display:flex;
   flex-wrap: wrap;
-  list-style : none;
 }
 
 li{
@@ -40,8 +71,8 @@ li{
 	text-align:center;
 	cursor:pointer;
   border-radius: 0.25rem;
-  filter: drop-shadow(8px 8px 10px grey);
-  transition: filter 0.3s cubic-bezier(.43,.41,.22,.91);;
+  /* filter: drop-shadow(8px 8px 10px grey);
+  transition: filter 0.3s cubic-bezier(.43,.41,.22,.91);; */
 }
 
 .movie-title{
@@ -66,28 +97,10 @@ li{
 }
 
 
-.search-container{
-    background-color: white;
-    font-size: 14px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    max-width: 425px;
-    margin: 0 auto;
-    border: 1px solid #cccccc;
-    overflow: hidden;
-    border-radius: 6px;
-    height : 30px;
-} 
-
 
 .tooltip {
   position: relative;
-  display: inline;
+  display: block;
   z-index : 999;
   
 }
@@ -95,12 +108,12 @@ li{
 .tooltip .tooltiptext {
   visibility: hidden;
   width:200px;
-  background-color: black;
-  color: #fff;
+  background-color:black;
+  color : white;
   text-align: left;
-  border-radius: 6px;
-  padding: 5px 0;
-  padding-left : 5px;
+  border-radius: 25px;
+  padding: 10px 0;
+  padding-left : 10px;
 
   /* Position the tooltip */
   position: absolute;
@@ -116,47 +129,4 @@ li{
   z-index : 999;
 }
 
-.search-container{
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-}
 
-input#search{
-  margin: 0 auto;
-  position : 50px;
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  font-size: 1.25rem;
-  vertical-align: center;
-  border: 1px solid #D0CFCE;
-  outline: none;
-  }
-
-  .search:focus{
-    border: 1px solid #008ABF;
-    transition: 0.35s ease;
-    color: #008ABF;
-  }
-  .search:focus:-webkit-input-placeholder{
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
-  ::-moz-placeholder {
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
-  .search:focus:-ms-placeholder {
-     transition: opacity 0.45s ease; 
-  	 opacity: 0;
-     }    
-
-.search-icon{
-  position: relative;
-  float: right;
-  width: 20%;
-  height: 100%;
-  top: -62px;
-  right: -45px;
-}

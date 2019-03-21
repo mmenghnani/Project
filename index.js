@@ -39,7 +39,7 @@ const handleMouseEnter = async function (evt) {
       const content = await response.json();
       if(content.Director){
         var element = document.getElementById(evt.target.id);
-        element.innerHTML += '<span class="tooltiptext">Title - '+ content.Title + ' <br />Year - '+ content.Year + '<br />Rating - '+ content.imdbRating +'<br />Director - '+ content.Director +'</span>';
+        element.innerHTML += '<span class="tooltiptext">Title - '+ content.Title + ' <br />Director - '+ content.Director + '<br />Rating - '+ content.imdbRating +'<br />Year - '+ content.Year +'</span>';
       }
       else {
 
